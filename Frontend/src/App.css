@@ -213,3 +213,150 @@ body{
   #chk:checked ~ .signup label{
     transform: scale(.6);
   }
+
+
+
+  /* profile page */
+
+  .userprofile-container {
+    width:1000px;
+    margin:  auto;
+    padding: 0 1rem;
+    /* border: 1px solid black; */
+    position: relative;
+    /* left: 50%; */
+}
+
+.userprofile-profile-header {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    margin-bottom: 2rem;
+    /* border: 1px solid black; */
+    text-align: center;
+}
+
+.userprofile-profile-picture {
+    width: 150px;
+    height: 150px;
+    border-radius: 50%;
+    margin: 0 auto 1rem;
+    display: block;
+    background: #000000;
+    object-fit: cover;
+}
+
+.userprofile-profile-name {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.userprofile-profile-bio {
+    color: #666;
+    margin-bottom: 1rem;
+}
+
+.userprofile-profile-stats {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1rem;
+    margin-bottom: 2rem;
+}
+
+.userprofile-stat-card {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 8px;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+.userprofile-stat-value {
+    font-size: 1.5rem;
+    font-weight: 600;
+    color: #1a1a1a;
+}
+
+.userprofile-stat-label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.userprofile-profile-details {
+    background: white;
+    border-radius: 10px;
+    padding: 2rem;
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
+}
+
+.userprofile-details-section {
+    margin-bottom: 1.5rem;
+}
+
+.userprofile-details-heading {
+    font-size: 1.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    color: #1a1a1a;
+}
+
+.userprofile-details-grid {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 1rem;
+}
+
+.userprofile-details-item {
+    margin-bottom: 0.5rem;
+}
+
+.userprofile-details-label {
+    color: #666;
+    font-size: 0.9rem;
+}
+
+.userprofile-details-value {
+    color: #1a1a1a;
+    font-weight: 500;
+}
+
+.userprofile-button {
+    position: relative;
+    display: inline-block;
+    margin: 15px;
+    padding: 8px 30px;
+    text-align: center;
+    font-size: 18px;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #0b0b0b;
+    background: transparent;
+    cursor: pointer;
+    transition: ease-out 0.5s;
+    border: 2px solid #0b0b0b;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #0b0b0b;
+}
+
+.userprofile-button:hover {
+    color: white;
+    box-shadow: inset 0 -100px 0 0 #0b0b0b;
+}
+
+.userprofile-button:active {
+    transform: scale(0.9);
+}
+
+
+
+@media (max-width: 768px) {
+    .profile-stats {
+        grid-template-columns: 1fr;
+    }
+
+    .details-grid {
+        grid-template-columns: 1fr;
+    }
+}
