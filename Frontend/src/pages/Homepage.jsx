@@ -17,6 +17,7 @@ function Homepage() {
           rel="stylesheet"
         />
       </head>
+      
 
       <div className="main">
         <div className="bkgrnd-img">
@@ -29,7 +30,7 @@ function Homepage() {
               placeholder="Search"
             />
             <div className="nav-links">
-              <div className="hcp" onClick={() => navigate("/Home")}>Home</div>
+              <div className="hcp" onClick={() => navigate("/")}>Home</div>
               <div className="hcp" onClick={() => navigate("/cart")}>Cart</div>
               <div className="hcp" onClick={() => navigate("/profile")}>Profile</div>
               <div className="hcp" onClick={() => navigate("/signup")}>Login/Signup</div> {/* ✅ Fixed */}
