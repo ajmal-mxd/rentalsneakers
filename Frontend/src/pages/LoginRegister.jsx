@@ -28,7 +28,7 @@ function LoginRegister() {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/signup", {
+      const response = await axios.post("http://localhost:5001/signup", {
         username,
         email,
         password,
@@ -52,7 +52,7 @@ function LoginRegister() {
     }
 
     try {
-      const response = await axios.post("http://localhost:5000/login", {
+      const response = await axios.post("http://localhost:5001/login", {
         email: loginEmail, // ✅ FIX: Backend expects `email`
         password: loginPassword, // ✅ FIX: Backend expects `password`
       });
@@ -62,7 +62,7 @@ function LoginRegister() {
 
       alert(response.data.msg);
 
-      navigate("/home"); // ✅ Redirect to Profile Page after login
+      navigate("/"); // ✅ Redirect to Profile Page after login
     } catch (error) {
       if (error.response) {
         alert(error.response.data.error || `Error ${error.response.status}`);
