@@ -5,7 +5,8 @@ import LoginRegister from './pages/LoginRegister'
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
 import Homepage from './pages/Homepage'
 import Profile from './pages/Profile'
-import Editprofile from './pages/Editprofile'
+import ForgotPassword from './pages/ForgotPassword'
+import ResetPassword from './pages/ResetPassword'
 
 function App() {
 
@@ -17,7 +18,8 @@ function App() {
           <Route path="/signup" element={<LoginRegister />} />
           <Route path="/" element={<Homepage />} />
           <Route path="/profile" element={<Profile/>} />
-          <Route path="/editprofile" element={<Editprofile/>} />
+          <Route path="/forgot-password" element={<ForgotPassword/>} />
+          <Route path="/resetpassword" element={<ResetPassword/>} />
 
                     
         </Routes>

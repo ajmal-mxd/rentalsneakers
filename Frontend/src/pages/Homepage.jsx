@@ -8,17 +8,6 @@ function Homepage() {
   return (
     <>
       
-      <head>
-        <title>Sneaker Rental | Homepage</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=Rubik+Dirt&display=swap"
-          rel="stylesheet"
-        />
-      </head>
-      
-
       <div className="main">
         <div className="bkgrnd-img">
           
@@ -42,7 +31,7 @@ function Homepage() {
           <div className="text">
             <h1>Rent Your Favourite Sneakers</h1>
           </div>
-          <button className="see-more" onClick={() => navigate("/sneakers")}>
+          <button className="see-more" onClick={() => navigate("/sneakertable")}>
             See Our Sneakers
           </button>
         </div>
