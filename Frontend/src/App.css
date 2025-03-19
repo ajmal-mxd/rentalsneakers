@@ -228,30 +228,22 @@ body{
 
 
   /* profile page */
-  :root {
-    --primary-color: #0b0b0b;
-    --secondary-color: #666;
-    --background-color: #ffffff;
-    --box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
-    --border-radius: 10px;
-    --font-size-base: 1rem;
-    --font-size-large: 1.8rem;
-    --font-size-medium: 1.2rem;
-}
-
-.userprofile-container {
-    width: 1000px;
-    margin: auto;
+  .userprofile-container {
+    width:1000px;
+    margin:  auto;
     padding: 0 1rem;
+    /* border: 1px solid black; */
     position: relative;
+    /* left: 50%; */
 }
 
 .userprofile-profile-header {
-    background: var(--background-color);
-    border-radius: var(--border-radius);
+    background: white;
+    border-radius: 10px;
     padding: 2rem;
-    box-shadow: var(--box-shadow);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
     margin-bottom: 2rem;
+    /* border: 1px solid black; */
     text-align: center;
 }
 
@@ -266,13 +258,13 @@ body{
 }
 
 .userprofile-profile-name {
-    font-size: var(--font-size-large);
+    font-size: 1.8rem;
     font-weight: 600;
     margin-bottom: 0.5rem;
 }
 
 .userprofile-profile-bio {
-    color: var(--secondary-color);
+    color: #666;
     margin-bottom: 1rem;
 }
 
@@ -284,29 +276,29 @@ body{
 }
 
 .userprofile-stat-card {
-    background: var(--background-color);
+    background: white;
     padding: 1.5rem;
     border-radius: 8px;
-    box-shadow: var(--box-shadow);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
     text-align: center;
 }
 
 .userprofile-stat-value {
     font-size: 1.5rem;
     font-weight: 600;
-    color: var(--primary-color);
+    color: #1a1a1a;
 }
 
 .userprofile-stat-label {
-    color: var(--secondary-color);
+    color: #666;
     font-size: 0.9rem;
 }
 
 .userprofile-profile-details {
-    background: var(--background-color);
-    border-radius: var(--border-radius);
+    background: white;
+    border-radius: 10px;
     padding: 2rem;
-    box-shadow: var(--box-shadow);
+    box-shadow: 10px 10px 10px rgba(0, 0, 0, 0.1);
 }
 
 .userprofile-details-section {
@@ -314,10 +306,10 @@ body{
 }
 
 .userprofile-details-heading {
-    font-size: var(--font-size-medium);
+    font-size: 1.2rem;
     font-weight: 600;
     margin-bottom: 1rem;
-    color: var(--primary-color);
+    color: #1a1a1a;
 }
 
 .userprofile-details-grid {
@@ -331,12 +323,12 @@ body{
 }
 
 .userprofile-details-label {
-    color: var(--secondary-color);
+    color: #666;
     font-size: 0.9rem;
 }
 
 .userprofile-details-value {
-    color: var(--primary-color);
+    color: #1a1a1a;
     font-weight: 500;
 }
 
@@ -349,48 +341,216 @@ body{
     font-size: 18px;
     letter-spacing: 1px;
     text-decoration: none;
-    color: var(--primary-color);
+    color: #0b0b0b;
     background: transparent;
     cursor: pointer;
     transition: ease-out 0.5s;
-    border: 2px solid var(--primary-color);
-    border-radius: var(--border-radius);
-    box-shadow: inset 0 0 0 0 var(--primary-color);
+    border: 2px solid #0b0b0b;
+    border-radius: 10px;
+    box-shadow: inset 0 0 0 0 #0b0b0b;
 }
 
 .userprofile-button:hover {
     color: white;
-    box-shadow: inset 0 -100px 0 0 var(--primary-color);
+    box-shadow: inset 0 -100px 0 0 #0b0b0b;
 }
 
 .userprofile-button:active {
     transform: scale(0.9);
 }
 
+
+
 @media (max-width: 768px) {
-    .userprofile-profile-stats {
+    .profile-stats {
         grid-template-columns: 1fr;
     }
 
-    .userprofile-details-grid {
+    .details-grid {
         grid-template-columns: 1fr;
-    }
-
-    .userprofile-profile-header {
-        padding: 1.5rem;
-    }
-
-    .userprofile-profile-picture {
-        width: 120px;
-        height: 120px;
-    }
-
-    .userprofile-profile-name {
-        font-size: 1.5rem;
-    }
-
-    .userprofile-profile-bio {
-        font-size: 1rem;
     }
 }
 
+/* EditProfile.css */
+
+/* Container for the entire profile edit page */
+
+.editprofile-container {
+    width: 1000px;
+    margin: auto;
+    padding: 0 1rem;
+    border: 1px solid black;
+}
+
+.edit-profile-form{
+  display: flexbox;
+  /* border: #000 solid 1px; */
+  width: 700px;
+  height: 700px;
+  background-color:rgba(245, 245, 245, 0.911);
+  color: #000;
+  border-radius: 20px;
+  padding-top: 50px;
+}
+h3{
+  text-align: center;
+}
+input{
+  border: #000000af solid 1px;
+  box-shadow: #666 1px 1px 5px;
+  ;
+}
+.submit-button{
+  width: 100px;
+  margin-bottom: 30px;
+}
+.edit-profile-heading{
+  text-align: center;
+}
+
+
+/* productlist page  */
+
+
+/* Container */
+.product-list-container {
+  padding: 20px;
+  background-color:#ddd;
+  width: 1860px;
+}
+
+.product-list-title {
+  text-align: center;
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 20px;
+}
+
+/* Search Bar */
+.product-search-container {
+  display: flex;
+  justify-content: center;
+  margin-bottom: 15px;
+}
+
+.product-search-input {
+  padding: 8px;
+  width: 300px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Filters */
+.product-filter-container {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-bottom: 20px;
+}
+
+.product-filter-dropdown {
+  padding: 8px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+/* Grid */
+.product-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+}
+
+/* Product Card */
+.product-card {
+  border: 1px solid #ddd;
+  border-radius: 8px;
+  padding: 15px;
+  text-align: center;
+  box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+  transition: 0.3s;
+}
+
+.product-card:hover {
+  box-shadow: 4px 4px 12px rgba(0, 0, 0, 0.2);
+}
+
+.product-image {
+  width: 100%;
+  height:300px;
+  object-fit: cover;
+  border-radius: 5px;
+}
+
+.product-name {
+  font-size: 18px;
+  font-weight: bold;
+  margin-top: 10px;
+}
+
+.product-brand,
+.product-price,
+.product-size {
+  color: #666;
+  margin: 5px 0;
+}
+
+/* Status */
+.product-status {
+  margin-top: 10px;
+  padding: 5px;
+  font-size: 14px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+.product-status.available {
+  background: #d4edda;
+  color: #155724;
+}
+
+.product-status.rented {
+  background: #f8d7da;
+  color: #721c24;
+}
+
+/* Rent Button */
+.product-rent-button {
+  width: 100%;
+  padding: 10px;
+  background: #007bff;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  margin-top: 10px;
+}
+
+.product-rent-button:disabled {
+  background: #ccc;
+  cursor: not-allowed;
+}
+
+
+
+/* forgott password */
+.forgot-password-container{
+  width: 500px;
+  background-color: white;
+  text-align: center;
+  border-radius: 20px;
+  height: 300px;
+  padding-top: 50px;
+  color: #000;
+}
+
+/* reset password */
+.reset-password-container{
+  width: 500px;
+  background-color: white;
+  text-align: center;
+  border-radius: 20px;
+  height: 300px;
+  padding-top: 50px;
+  color: black;
+}

@@ -1,6 +1,7 @@
 import React from "react";
 import { useNavigate } from "react-router-dom"; 
 import "../App.css";
+import Navbar from "../../components/Navbar";
 
 function Homepage() {
   const navigate = useNavigate();
@@ -10,28 +11,15 @@ function Homepage() {
       
       <div className="main">
         <div className="bkgrnd-img">
+          <Navbar />
           
-          <div className="nav-bar">
-            <input
-              type="text"
-              className="search-bar"
-              id="search"
-              placeholder="Search"
-            />
-            <div className="nav-links">
-              <div className="hcp" onClick={() => navigate("/")}>Home</div>
-              <div className="hcp" onClick={() => navigate("/cart")}>Cart</div>
-              <div className="hcp" onClick={() => navigate("/profile")}>Profile</div>
-              <div className="hcp" onClick={() => navigate("/signup")}>Login/Signup</div> {/* ✅ Fixed */}
-            </div>
-          </div>
-          
+        
 
           
           <div className="text">
             <h1>Rent Your Favourite Sneakers</h1>
           </div>
-          <button className="see-more" onClick={() => navigate("/sneakertable")}>
+          <button className="see-more" onClick={() => navigate("/productlist")}>
             See Our Sneakers
           </button>
         </div>

@@ -83,7 +83,12 @@ function LoginRegister() {
       setLoginEmail("");
       setLoginPassword("");
 
-      navigate("/"); // Redirect to Profile
+      if(response.data.user.role === "admin") {
+        navigate("/admindashboard"); // Redirect to Admin Dashboard
+      } else{
+        navigate("/"); // Redirect to Profile
+      }
+
     } catch (error) {
       if (error.response?.status === 400) {
         setLoginError(error.response.data.errors[0].msg);

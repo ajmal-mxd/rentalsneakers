@@ -1,5 +1,6 @@
 import React, { useState } from "react";
 import axios from "axios";
+import "../App.css"
 
 function ForgotPassword() {
   const [email, setEmail] = useState("");
@@ -12,7 +13,7 @@ function ForgotPassword() {
     setMessage("");
 
     try {
-      const response = await axios.post("http://localhost:5001/user/forgot-password", { email });
+      const response = await axios.post("http://localhost:5001/user/forgotpass", { email });
       setMessage(response.data.msg);
     } catch (error) {
       setMessage(error.response?.data?.error || "Something went wrong.");
@@ -42,3 +43,4 @@ function ForgotPassword() {
 }
 
 export default ForgotPassword;
+  

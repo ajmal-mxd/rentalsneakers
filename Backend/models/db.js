@@ -6,4 +6,8 @@ const connect =()=>{mongoose.connect(uri,)
 .then(()=>{console.log(`MDB connected ${uri}`);})
 .catch((err)=>{console.log(err)});
 }
-module.exports={connect}
+
+
+
+
+module.exports={connect} 

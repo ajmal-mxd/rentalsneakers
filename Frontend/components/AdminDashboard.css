@@ -1,0 +1,123 @@
+/* Admin Dashboard Layout */
+.admin-dashboard {
+  display: flex;
+  height: 100vh;
+  width: 100vw;
+
+}
+
+/* Sidebar */
+.admin-container {
+  width: 250px;
+  background-color: #13141a;
+  padding: 20px;
+  border-right: 2px solid #ddd;
+}
+
+/* Sidebar Buttons */
+.nav-link {
+  display: flex;
+  align-items: center;
+  padding: 12px 20px;
+  margin-bottom: 10px;
+  color: white;
+  background: none;
+  border: none;
+  width: 100%;
+  text-align: left;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.users-details-page{
+  height: 900px;
+  overflow: auto;
+  
+
+}
+
+
+
+
+.nav-link:hover {
+  background-color: #f3f4f6b9;
+}
+
+.nav-link:focus {
+  outline: none;
+}
+
+.active-link {
+  background-color: #2b6cb0;
+  color: white;
+  font-weight: bold;
+  border-radius: 5px;
+}
+
+/* Content Area */
+.admin-content {
+  flex: 1;
+  background-color: #f9fafb;
+  padding: 20px;
+  color: black;
+}
+
+
+
+/* Input and Button Styling */
+input {
+  border: 1px solid #ccc;
+  padding: 8px;
+  border-radius: 4px;
+}
+
+button {
+  padding: 8px 12px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+button:hover {
+  opacity: 0.9;
+}
+
+/* Table Styling */
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 10px;
+
+}
+
+
+th, td {
+  padding: 10px;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+tr:nth-child(even) {
+  background-color: #f9f9f9;
+}
+
+.available-img {
+  width: 200px;
+  height: 200px;
+  object-fit: cover;
+  margin-bottom: 20px;
+  padding-left: 10px;
+}
+.available-sneakers {
+  justify-content: space-between;
+  border: 2px solid #ddd;
+  display: flex;
+  overflow: scroll;
+  max-width: 1600px;
+
+
+}
