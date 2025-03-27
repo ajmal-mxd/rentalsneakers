@@ -2,7 +2,7 @@ const express = require("express");
 const { login, signup, editProfile, getProfile, forgotPassword, resetPassword,getallproduct } = require("../controllers/usercontroller");
 const { registerValidation, loginValidation } = require("../middlewares/validation");
 const authMiddleware = require("../middlewares/authmiddleware");
-const {getAllUsers,deleteUser} = require("../controllers/usercontroller");
+const {getAllUsers,deleteUser,toggleBlockUser} = require("../controllers/usercontroller");
 const router = express.Router();
 
 // ✅ Authentication routes
@@ -26,5 +26,6 @@ router.delete("/:id",authMiddleware,deleteUser)
 // product view and order
 router.get("/product",getallproduct)
 
+router.put("/block/:id", toggleBlockUser); // New route to block/unblock user
 
 module.exports = router;

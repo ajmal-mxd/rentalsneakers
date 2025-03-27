@@ -16,6 +16,10 @@ const login = async (req, res) => {
       return res.status(400).json({ msg: "Invalid email or password" });
     }
 
+    if (user.blocked){
+      return res.status(400).json({ msg: "Your account has been blocked" });
+    }
+
     const isPasswordValid = await bcrypt.compare(password, user.password);
 
     if (!isPasswordValid) {
@@ -257,5 +261,22 @@ const getallproduct = async (req, res) => {
     }
   }
 
+  const toggleBlockUser = async (req, res) => {
+    try {
+      const { id } = req.params;
+      const user = await User.findById(id);
+  
+      if (!user) return res.status(404).json({ msg: "User not found" });
+  
+      user.blocked = !user.blocked;
+      await user.save();
+  
+      res.json({ msg: `User ${user.blocked ? "blocked" : "unblocked"} successfully`, user });
+    } catch (error) {
+      console.error("Error blocking user:", error);
+      res.status(500).json({ msg: "Server error" });
+    }
+  };
 
-module.exports = { login, signup, getProfile, editProfile, getAllUsers, deleteUser, forgotPassword ,resetPassword,getallproduct};
+
+module.exports = { login, signup, getProfile, editProfile, getAllUsers, deleteUser, forgotPassword ,resetPassword,getallproduct,toggleBlockUser};

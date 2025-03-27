@@ -64,37 +64,36 @@ function LoginRegister() {
     e.preventDefault();
     setLoginError(null);
     setLoadingLogin(true);
-
+  
     if (!loginEmail || !loginPassword) {
       setLoginError("Please fill all the fields.");
       setLoadingLogin(false);
       return;
     }
-
+  
     try {
       const response = await axios.post("http://localhost:5001/user/login", {
         email: loginEmail,
         password: loginPassword,
       });
-
+  
+      // Store token in localStorage
       localStorage.setItem("token", response.data.token);
       alert(response.data.msg);
-      
+  
+      // Redirect based on user role
+      if (response.data.user?.role === "admin") {
+        navigate("/admindashboard");
+      } else {
+        navigate("/");
+      }
+  
       setLoginEmail("");
       setLoginPassword("");
-
-      if(response.data.user.role === "admin") {
-        navigate("/admindashboard"); // Redirect to Admin Dashboard
-      } else{
-        navigate("/"); // Redirect to Profile
-      }
-
+  
     } catch (error) {
-      if (error.response?.status === 400) {
-        setLoginError(error.response.data.errors[0].msg);
-      } else {
-        setLoginError("An unexpected error occurred.");
-      }
+      console.error("Login error:", error.response?.data?.msg || error.message);
+      setLoginError(error.response?.data?.msg || "Login failed. Please try again.");
     } finally {
       setLoadingLogin(false);
     }
